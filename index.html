@@ -4,17 +4,44 @@
     <meta charset="UTF-8">
     <title>Food Fight</title>
     <link rel="icon" type="image/x-icon" href="logo.png">
+    <style>
+      .container {
+        height: 1000px;
+        position: relative;
+        background-image: url('splash.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 900px 900px;
+      }
+
+      .vertical-center {
+        margin: 0;
+        position: absolute;
+        top: 25%;
+        bottom: 25%;
+        left: 25%;
+        right: 25%;
+      }
+
+      .main-button {
+        border-radius: 12px;
+        background-color: white;
+        border: white;
+        width: 250px;
+        height: 30px;
+      }
+    </style>
   </head>
   <body style="background-color: #FFC46C;">
-    <div align="center" style="background-image: url('splash.png'); background-repeat: no-repeat; background-position: center; background-size: 700px 700px;">
-      <img src="logo_trans.png" width="500">
-      <br/>
-      <button style="border-radius: 12px; background-color: white; border: white; width: 250px; height: 30px"><b style="font-family: Verdana, sans-serif; color: #69443C;">START</b></button>
-      <br/>
-      <br/>
-      <button style="border-radius: 12px; background-color: white; border: white; width: 250px; height: 30px"><b style="font-family: Verdana, sans-serif; color: #69443C;">HOW TO PLAY</button>
-      <br/>
-      <br/>
+    <div class="container" align="center">
+      <div class="vertical-center">
+        <img src="logo_trans.png" width="600">
+        <br/>
+        <button class="main-button"><b style="font-family: Verdana, sans-serif; color: #69443C;">START</b></button>
+        <br/>
+        <br/>
+        <button class="main-button"><b style="font-family: Verdana, sans-serif; color: #69443C;">HOW TO PLAY</button>
+      </div>
     </div>
   </body>
 </html>
