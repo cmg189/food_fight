@@ -13,10 +13,14 @@
       <div class="vertical-center">
         <img src="images/logo_trans.png" width="600">
         <br/>
-        <button class="main-button"><b>START</b></button>
-        <br/>
-        <br/>
-        <button class="main-button"><b>HOW TO PLAY</button>
+        <button class="main-button" id="main_start"><b>START</b></button>
+        <br/><br/>
+        <button class="main-button" id="main_instructions"><b>HOW TO PLAY</button>
+				<script type="text/javascript">
+					document.getElementById("main_instructions").onclick = function(){
+						location.href = "instructions.html";
+					};
+				</script>
       </div>
     </div>
   </body>
