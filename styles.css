@@ -1,1 +1,31 @@
- 
+.body {
+	background-color: #FFC46C;
+}
+
+.container {
+	height: 1000px;
+	position: relative;
+	background-image: url('images/splash.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 900px 900px;
+}
+
+.vertical-center {
+	margin: 0;
+	position: absolute;
+	top: 25%;
+	bottom: 25%;
+	left: 25%;
+	right: 25%;
+}
+
+.main-button {
+	font-family: Verdana, sans-serif;
+	color: #69443C;"
+	border-radius: 12px;
+	background-color: white;
+	border: white;
+	width: 250px;
+	height: 30px;
+}
