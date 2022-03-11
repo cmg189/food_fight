@@ -5,7 +5,6 @@
     <title>Food Fight</title>
     <link rel="icon" type="image/x-icon" href="images/logo.png">
 		<link rel="stylesheet" href="styles.css">
-		<script src="backend.js" defer></script>
   </head>
 
   <body class ="body">
@@ -14,6 +13,11 @@
         <img src="images/logo_trans.png" width="600">
         <br/>
         <button class="main-button" id="main_start"><b>START</b></button>
+        <script type="text/javascript">
+					document.getElementById("main_start").onclick = function(){
+						location.href = "game.html";
+					};
+				</script>
         <br/><br/>
         <button class="main-button" id="main_instructions"><b>HOW TO PLAY</button>
 				<script type="text/javascript">
