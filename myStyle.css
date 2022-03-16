@@ -1,0 +1,113 @@
+body {
+	background-color: #FFC46C;
+}
+
+.container {
+  height: 900px;
+  position: relative;
+  background-image: url('splash.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 900px 900px;
+	display: flex;
+  justify-content: center;
+  // width: 100%;
+}
+
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 15%;
+  bottom: 50%;
+  left: 25%;
+  right: 25%;
+	width: auto;
+}
+
+.main-button {
+  border-radius: 12px;
+  background-color: white;
+  border: white;
+  width: 250px;
+  height: 30px;
+}
+
+.battleship-grid {
+  margin: 2vmin;
+  display: grid;
+  grid-template-rows: repeat(10, 50px);
+  grid-template-columns: repeat(10, 50px);
+	justify-content: center;
+}
+
+.battleship-grid .square {
+  border: 1px solid white;
+}
+
+.bread-vertical {
+	height: 150px;
+	width: 50px;
+	background-image: url('bread.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 50px 150px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	z-index: 3;
+}
+
+.bread-vertical:hover {
+	transform: scale(1.2);
+}
+
+.bread-horizontal {
+	height: 50px;
+	width: 150px;
+	background-image: url('bread-hor.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 150px 50px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	z-index: 3;
+}
+
+.bread-horizontal:hover {
+	transform: scale(1.2);
+}
+
+.pocky-vertical {
+	height: 150px;
+	width: 50px;
+	background-image: url('pocky.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 50px 150px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	z-index: 3;
+}
+
+.pocky-vertical:hover {
+	transform: scale(1.2);
+}
+
+.pocky-horizontal {
+	height: 50px;
+	width: 150px;
+	background-image: url('pocky-hor.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 150px 50px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	z-index: 3;
+}
+
+.pocky-horizontal:hover {
+	transform: scale(1.2);
+}

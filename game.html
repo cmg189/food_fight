@@ -2,24 +2,16 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Food Fight: Let's Play!</title>
-		<link rel="stylesheet" href="styles.css">
-		<script async src="backend.js"></script>
+    <title>Play Game!</title>
+    <link rel="icon" type="image/x-icon" href="logo.png">
+    <link rel="stylesheet" href="myStyle.css">
+    <script src="logic.js" charset="utf-8"></script>
   </head>
-
-  <body class ="body">
+  <body>
     <div class="container" align="center">
       <div class="vertical-center">
-        <h2>Welcome to Food Fight!</h2>
-				<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-				<button class="main-button" id="home_page"><b>Return to Home Page</button>
-
-				<script type="text/javascript">
-					document.getElementById("home_page").onclick = function(){
-						location.href = "index.html";
-					};
-				</script>
-        
+        <div class="battleship-grid grid-user"></div>
       </div>
     </div>
   </body>
+</html>
