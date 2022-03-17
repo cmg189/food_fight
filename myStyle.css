@@ -1,26 +1,42 @@
 body {
 	background-color: #FFC46C;
+	background-size: cover;
+}
+
+b {
+	font-family: Verdana,sans-serif;
+	color: #69443C;
 }
 
 .container {
-  height: 900px;
+  height: 1000px;
   position: relative;
   background-image: url('splash.png');
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 900px 900px;
+  background-size: 1000px 1000px;
 	display: flex;
   justify-content: center;
-  // width: 100%;
+  width: 100%;
 }
 
 .vertical-center {
-  margin: 0;
+  margin: 0px;
   position: absolute;
   top: 15%;
   bottom: 50%;
   left: 25%;
   right: 25%;
+	width: auto;
+}
+
+.left-container {
+	margin: 0px;
+	position: absolute;
+	top: 25%;
+	bottom: 50%;
+	left: 0%;
+	right: 75%;
 	width: auto;
 }
 
@@ -30,6 +46,11 @@ body {
   border: white;
   width: 250px;
   height: 30px;
+	margin: 5px;
+}
+
+.main-button:hover {
+	transform: scale(1.2);
 }
 
 .battleship-grid {
@@ -38,6 +59,10 @@ body {
   grid-template-rows: repeat(10, 50px);
   grid-template-columns: repeat(10, 50px);
 	justify-content: center;
+	border: 2px solid white;
+	grid-gap: 0px;
+	height: 500px;
+	width: 500px;
 }
 
 .battleship-grid .square {
@@ -109,5 +134,107 @@ body {
 }
 
 .pocky-horizontal:hover {
+	transform: scale(1.2);
+}
+
+.bento-vertical {
+	height: 150px;
+	width: 100px;
+	background-image: url('bento.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100px 150px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	z-index: 3;
+}
+
+.bento-vertical:hover {
+	transform: scale(1.2);
+}
+
+.bento-horizontal {
+	height: 100px;
+	width: 150px;
+	background-image: url('bento-hor.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 150px 100px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	z-index: 3;
+}
+
+.bento-horizontal:hover {
+	transform: scale(1.2);
+}
+
+.donut-vertical {
+	height: 100px;
+	width: 100px;
+	background-image: url('donut.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100px 100px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	z-index: 3;
+}
+
+.donut-vertical:hover {
+	transform: scale(1.2);
+}
+
+.donut-horizontal {
+	height: 100px;
+	width: 100px;
+	background-image: url('donut-hor.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100px 100px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	z-index: 3;
+}
+
+.donut-horizontal:hover {
+	transform: scale(1.2);
+}
+
+.pizza-vertical {
+	height: 150px;
+	width: 150px;
+	background-image: url('pizza.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 150px 150px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	z-index: 3;
+}
+
+.pizza-vertical:hover {
+	transform: scale(1.2);
+}
+
+.pizza-horizontal {
+	height: 150px;
+	width: 150px;
+	background-image: url('pizza-hor.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 150px 150px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	z-index: 3;
+}
+
+.pizza-horizontal:hover {
 	transform: scale(1.2);
 }
