@@ -29,3 +29,98 @@
 	width: 250px;
 	height: 30px;
 }
+
+.game_container {
+	height: 1000px;
+	display: flex;
+	background-image: url('images/splash.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	justify-content: center;
+	background-size: 1000px 1000px; /* size of splash.png */
+	width: 100%;
+}
+
+.game_header {
+	margin: 0;
+	height: 500px;
+
+}
+
+.left_side {
+  height: 100%;
+  width: 150px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: white;
+  overflow-x: hidden;
+}
+
+.right_side {
+  height: 100%;
+  width: 150px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: white;
+  overflow-x: hidden;
+}
+
+.grid_column {
+	display: grid;
+	justify-content: center;
+	grid-template-columns: 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px;
+	grid-template-rows: 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px;
+	grid-gap: 0;
+}
+
+.cell {
+	text-align: center;
+	font-size: 20px;
+	padding: 12px 5px;
+	border: 2px solid #fff0f5;
+	background-color: hsl(19,100%,73%);
+	color: #fff0f5;
+
+}
+
+/*
+
+These are not being used
+
+.main_grid {
+	margin: 2vmin;
+	display: grid;
+	background-color: hsl(200, 100%, 50%);
+	grid-template-rows: repeat(10, 4.6vmin);
+	grid-template-columns: repeat(10, 4.6vmin);
+	z-index: 1;
+
+}
+
+.main_grid div {
+	border: 1px solid hsla(0, 0%, 100%, .2);
+
+}
+
+.user_grid {
+	margin: 2vmin;
+	display: grid;
+	background-color: hsl(200, 100%, 50%);
+	grid-template-rows: repeat(10, 4.6vmin);
+	grid-template-columns: repeat(10, 4.6vmin);
+
+}
+
+.computer_grid {
+	margin: 2vmin;
+	display: grid;
+	background-color: hsl(200, 100%, 50%);
+	grid-template-rows: repeat(10, 4.6vmin);
+	grid-template-columns: repeat(10, 4.6vmin);
+
+}
+*/
