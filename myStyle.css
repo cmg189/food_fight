@@ -11,7 +11,7 @@ b {
 .container {
   height: 1000px;
   position: relative;
-  background-image: url('splash.png');
+  background-image: url('images/splash.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: 1000px 1000px;
@@ -72,7 +72,7 @@ b {
 .bread-vertical {
 	height: 150px;
 	width: 50px;
-	background-image: url('bread.png');
+	background-image: url('images/bread.png');
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 50px 150px;
@@ -89,7 +89,7 @@ b {
 .bread-horizontal {
 	height: 50px;
 	width: 150px;
-	background-image: url('bread-hor.png');
+	background-image: url('images/bread-hor.png');
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 150px 50px;
@@ -106,7 +106,7 @@ b {
 .pocky-vertical {
 	height: 150px;
 	width: 50px;
-	background-image: url('pocky.png');
+	background-image: url('images/pocky.png');
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 50px 150px;
@@ -123,7 +123,7 @@ b {
 .pocky-horizontal {
 	height: 50px;
 	width: 150px;
-	background-image: url('pocky-hor.png');
+	background-image: url('images/pocky-hor.png');
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 150px 50px;
@@ -140,7 +140,7 @@ b {
 .bento-vertical {
 	height: 150px;
 	width: 100px;
-	background-image: url('bento.png');
+	background-image: url('images/bento.png');
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 100px 150px;
@@ -157,7 +157,7 @@ b {
 .bento-horizontal {
 	height: 100px;
 	width: 150px;
-	background-image: url('bento-hor.png');
+	background-image: url('images/bento-hor.png');
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 150px 100px;
@@ -174,7 +174,7 @@ b {
 .donut-vertical {
 	height: 100px;
 	width: 100px;
-	background-image: url('donut.png');
+	background-image: url('images/donut.png');
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 100px 100px;
@@ -191,7 +191,7 @@ b {
 .donut-horizontal {
 	height: 100px;
 	width: 100px;
-	background-image: url('donut-hor.png');
+	background-image: url('images/donut-hor.png');
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 100px 100px;
@@ -208,7 +208,7 @@ b {
 .pizza-vertical {
 	height: 150px;
 	width: 150px;
-	background-image: url('pizza.png');
+	background-image: url('images/pizza.png');
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 150px 150px;
@@ -225,7 +225,7 @@ b {
 .pizza-horizontal {
 	height: 150px;
 	width: 150px;
-	background-image: url('pizza-hor.png');
+	background-image: url('images/pizza-hor.png');
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 150px 150px;
