@@ -21,13 +21,12 @@
 }
 
 .main-button {
-	font-family: Verdana, sans-serif;
-	color: #69443C;"
 	border-radius: 12px;
-	background-color: white;
-	border: white;
-	width: 250px;
-	height: 30px;
+  background-color: white;
+  border: white;
+  width: 250px;
+  height: 30px;
+	margin: 5px;
 }
 
 .game_container {
