@@ -12,19 +12,25 @@
       <div class="left-container">
         <img src="images/logo_trans.png" width="450">
         <button class="main-button"><b>HOW TO PLAY</b></button>
-        <button class="main-button"><b>RESTART</b></button>
+        <button class="main-button" id="restart"><b>RESTART</b></button>
+        <script type="text/javascript">
+            document.getElementById("restart").onclick = function(){
+                location.href = "index.html";
+            };
+        </script>
       </div>
-      <div class="vertical-center" style="transform: scale(1.1)">
-        <h3 style="margin: 0px"><b> HIDE YOUR FOOD! </b></h3>
+      <div class="vertical-center">
+        <h3 style="margin: 0px"><b id="hide"> HIDE YOUR FOOD! </b></h3>
         <div class="battleship-grid grid-user"></div>
-        <br/>
-        <button class="main-button"><b>READY</b></button>
+        <button class="main-button" id="ready"><b>READY</b></button>
         <br/>
         <br/>
         <br/>
         <br/>
         <p style="font-family: Verdana,sans-serif; color: #69443C; margin: 2px"><small>Copyright © 2022 by CAN</small></p>
         <p style="font-family: Verdana,sans-serif; color: #69443C; margin: 2px"><small>All rights reserved</small></p>
+      </div>
+      <div class="right-container">
       </div>
     </div>
   </body>

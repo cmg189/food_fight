@@ -28,6 +28,7 @@ b {
   left: 25%;
   right: 25%;
 	width: auto;
+	transform: scale(1.1)
 }
 
 .left-container {
@@ -37,6 +38,16 @@ b {
 	bottom: 50%;
 	left: 0%;
 	right: 75%;
+	width: auto;
+}
+
+.right-container {
+	margin: 0px;
+	position: absolute;
+	top: 20%;
+	bottom: 65%;
+	left: 75%;
+	right: 0%;
 	width: auto;
 }
 
@@ -237,4 +248,8 @@ b {
 
 .pizza-horizontal:hover {
 	transform: scale(1.2);
+}
+
+.grid-computer {
+	cursor: url('images/cursor.cur'), auto;
 }

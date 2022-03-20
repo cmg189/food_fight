@@ -1,9 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
   const userGrid = document.querySelector('.grid-user')
-  // const computerGrid = document.querySelector('.grid-computer')
+  var computerGrid
   const userSquares = []
-  // const computerSquares = []
+  const computerSquares = []
   const width = 10
+  const readyButton = document.querySelector('#ready')
+  const rightCon = document.querySelector('.right-container')
+  const centerCon = document.querySelector('.vertical-center')
+  const hide = document.querySelector('#hide')
+  var turn
+  var instruction = document.querySelector('h3')
 
   const foodArray = [
     {
@@ -63,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  createBoard(userGrid, userSquares);
+  createBoard(userGrid, userSquares)
 
   function generate(food) {
     let randomDirection = Math.floor(Math.random() * food.directions.length) // 0 or 1
@@ -97,8 +103,6 @@ document.addEventListener('DOMContentLoaded', () => {
     else {
       randomStart = Math.abs(Math.floor(Math.random() * userSquares.length - (food.myLength * direction)))
     }
-    console.log(randomStart)
-    console.log(userSquares.length)
 
     const isTaken = current.some(index => userSquares[randomStart + index].classList.contains('taken')) // Debug
     const isAtRightEdge = current.some(index => (randomStart + index) % width === width - 1)
@@ -170,5 +174,20 @@ document.addEventListener('DOMContentLoaded', () => {
   generate(foodArray[2])
   generate(foodArray[3])
   generate(foodArray[4])
+
+  readyButton.addEventListener('click', () => {
+    userGrid.remove()
+    rightCon.append(userGrid)
+    userGrid.style.transform = 'scale(0.7)'
+    readyButton.style.display = 'none'
+    computerGrid = document.createElement("div")
+    computerGrid.classList.add('battleship-grid', 'grid-computer')
+    centerCon.insertBefore(computerGrid, readyButton)
+    createBoard(computerGrid, computerSquares)
+    hide.remove()
+    turn = document.createElement("b")
+    turn.innerText = "YOUR TURN"
+    instruction.append(turn)
+  })
 
 })
