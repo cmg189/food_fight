@@ -29,6 +29,11 @@
 	margin: 5px;
 }
 
+.main-button:hover {
+	transform: scale(1.2);
+}
+
+
 .game_container {
 	height: 1000px;
 	display: flex;
