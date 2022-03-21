@@ -46,8 +46,8 @@ b {
 	position: absolute;
 	top: 20%;
 	bottom: 65%;
-	left: 75%;
-	right: 0%;
+	left: 70%;
+	right: 10%;
 	width: auto;
 }
 
@@ -250,6 +250,37 @@ b {
 	transform: scale(1.2);
 }
 
-.grid-computer {
+.grid-computer > .square {
 	cursor: url('images/cursor.cur'), auto;
+}
+
+.grid-computer > .square:hover {
+	background-color: #D1825C;
+	// cursor: url('images/cursor.cur'), auto;
+}
+
+.hit {
+	height: 50px;
+	width: 50px;
+	background-image: url('images/hit.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 50px 50px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	z-index: 4;
+}
+
+.miss {
+	height: 50px;
+	width: 50px;
+	background-image: url('images/miss.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 50px 50px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	z-index: 4;
 }
