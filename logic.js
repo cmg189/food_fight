@@ -5,11 +5,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const computerSquares = []
   const width = 10
   const readyButton = document.querySelector('#ready')
+  const reposition = document.querySelector('#reposition')
   const rightCon = document.querySelector('.right-container')
   const centerCon = document.querySelector('.vertical-center')
   const hide = document.querySelector('#hide')
   var turn
   var instruction = document.querySelector('h3')
+  var userScore = 0
+  var botScore = 0
+  var shotFired
 
   const foodArray = [
     {
@@ -71,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   createBoard(userGrid, userSquares)
 
-  function generate(food) {
+  function generate(food) { // User's food
     let randomDirection = Math.floor(Math.random() * food.directions.length) // 0 or 1
     let randomStart
     // console.log(randomDirection)
@@ -104,7 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
       randomStart = Math.abs(Math.floor(Math.random() * userSquares.length - (food.myLength * direction)))
     }
 
-    const isTaken = current.some(index => userSquares[randomStart + index].classList.contains('taken')) // Debug
+    const isTaken = current.some(index => userSquares[randomStart + index].classList.contains('taken'))
     const isAtRightEdge = current.some(index => (randomStart + index) % width === width - 1)
     const isAtLeftEdge = current.some(index => (randomStart + index) % width === 0)
 
@@ -180,14 +184,83 @@ document.addEventListener('DOMContentLoaded', () => {
     rightCon.append(userGrid)
     userGrid.style.transform = 'scale(0.7)'
     readyButton.style.display = 'none'
+    reposition.style.display = 'none'
     computerGrid = document.createElement("div")
     computerGrid.classList.add('battleship-grid', 'grid-computer')
     centerCon.insertBefore(computerGrid, readyButton)
     createBoard(computerGrid, computerSquares)
+    generateEnemy(foodArray[0]) // generate bread on the board
+    generateEnemy(foodArray[1])
+    generateEnemy(foodArray[2])
+    generateEnemy(foodArray[3])
+    generateEnemy(foodArray[4])
     hide.remove()
     turn = document.createElement("b")
     turn.innerText = "YOUR TURN"
     instruction.append(turn)
+    gameLogic()
   })
+
+  function generateEnemy(food) { // Computer's food
+    let randomDirection = Math.floor(Math.random() * food.directions.length) // 0 or 1
+    let randomStart
+    // console.log(randomDirection)
+    let current = food.directions[randomDirection] // array containing directions
+    if (randomDirection === 0) direction = 1 // horizontal
+    if (randomDirection === 1) direction = 10 // vertical
+    if (food.dimension === 2)
+    {
+      if (direction === 1)
+      {
+        randomStart = Math.abs(Math.floor(Math.random() * computerSquares.length - (food.myLength * direction + width)))
+      }
+      else
+      {
+        randomStart = Math.abs(Math.floor(Math.random() * computerSquares.length - (food.myLength * direction + 1)))
+      }
+    }
+    else if (food.dimension === 3)
+    {
+      if (direction === 1)
+      {
+        randomStart = Math.abs(Math.floor(Math.random() * computerSquares.length - (food.myLength * direction + 2*width)))
+      }
+      else
+      {
+        randomStart = Math.abs(Math.floor(Math.random() * computerSquares.length - (food.myLength * direction + 2)))
+      }
+    }
+    else {
+      randomStart = Math.abs(Math.floor(Math.random() * computerSquares.length - (food.myLength * direction)))
+    }
+
+    const isTaken = current.some(index => computerSquares[randomStart + index].classList.contains('taken'))
+    const isAtRightEdge = current.some(index => (randomStart + index) % width === width - 1)
+    const isAtLeftEdge = current.some(index => (randomStart + index) % width === 0)
+
+    if (!isTaken && !isAtRightEdge && !isAtLeftEdge)
+    {
+      current.forEach(index => computerSquares[randomStart + index].classList.add('taken', food.name))
+    }
+    else
+    {
+      generateEnemy(food)
+    }
+  }
+
+  function gameLogic()
+  {
+    // Loop for the game until someone score 25
+    computerSquares.forEach(cell => cell.addEventListener('click', () => {
+          shotFired = cell.dataset.id
+          if (cell.classList.contains('taken'))
+          {
+            cell.classList.add('hit')
+          }
+          else {
+            cell.classList.add('miss')
+          }
+      }))
+  }
 
 })

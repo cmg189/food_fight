@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Play Game!</title>
     <link rel="icon" type="image/x-icon" href="images/logo.png">
     <link rel="stylesheet" href="myStyle.css">
@@ -11,7 +12,12 @@
     <div class="container" align="center">
       <div class="left-container">
         <img src="images/logo_trans.png" width="450">
-        <button class="main-button"><b>HOW TO PLAY</b></button>
+        <button class="main-button" id="main-instruction"><b>HOW TO PLAY</b></button>
+        <script type="text/javascript">
+            document.getElementById("main-instruction").onclick = function(){
+              window.open("instructions.html", "_blank");
+            };
+        </script>
         <button class="main-button" id="restart"><b>RESTART GAME</b></button>
         <script type="text/javascript">
             document.getElementById("restart").onclick = function(){
