@@ -3,7 +3,7 @@ body {
 	background-size: cover;
 }
 
-b {
+b, p, dt {
 	font-family: Verdana,sans-serif;
 	color: #69443C;
 }
