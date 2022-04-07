@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
   var botScore = 0
   var shotFired
 
+
   const foodArray = [
     {
       name: 'bread',
@@ -261,6 +262,32 @@ document.addEventListener('DOMContentLoaded', () => {
             cell.classList.add('miss')
           }
       }))
+  }
+
+  // Get the modal
+  var modal = document.getElementById("myModal");
+
+  // Get the button that opens the modal
+  var winBtn = document.getElementById("winBtn");
+  var loseBtn = document.getElementById("loseBtn");
+
+  var message = document.getElementById("message");
+  var box = document.getElementById("modal-box");
+
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+
+  // When the user clicks the button, open the modal
+  winBtn.onclick = function() {
+    modal.style.display = "block";
+    message.innerText = "YOU WON";
+    box.classList.add('winning');
+  }
+
+  loseBtn.onclick = function() {
+    modal.style.display = "block";
+    message.innerText = "YOU LOST";
+    box.classList.add('losing');
   }
 
 })

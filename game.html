@@ -25,6 +25,8 @@
             };
         </script>
 				<button class="main-button" id="reposition" onclick="location.reload()"><b>REPOSITION FOOD ITEMS</b></button>
+        <button class="main-button" id="winBtn"><b>WIN MESSAGE</b></button>
+        <button class="main-button" id="loseBtn"><b>LOSE MESSAGE</b></button>
       </div>
       <div class="vertical-center">
         <h3 style="margin: 0px"><b id="hide"> HIDE YOUR FOOD! </b></h3>
@@ -39,6 +41,30 @@
       </div>
       <div class="right-container">
       </div>
+    </div>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content" id="modal-box" align="center">
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <b id="message"></b>
+        <br/>
+        <img src="images/logo_trans.png" width="350">
+        <br/>
+        <br/>
+        <button class="grey-button" id="again">PLAY AGAIN</button>
+        <script type="text/javascript">
+            document.getElementById("again").onclick = function(){
+                location.href = "index.html";
+            };
+        </script>
+      </div>
+
     </div>
   </body>
 </html>
