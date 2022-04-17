@@ -8,6 +8,16 @@ b, p, dt {
 	color: #69443C;
 }
 
+#again {
+		font-family: Verdana,sans-serif;
+		color: white;
+		font-weight: bold;
+}
+
+#message {
+		font-size: xx-large;
+}
+
 .container {
   height: 1000px;
   position: relative;
@@ -51,6 +61,12 @@ b, p, dt {
 	width: auto;
 }
 
+/* turn status invisible until ready button is clicked*/
+.player-status{
+	opacity: 0;
+
+}
+
 .main-button {
   border-radius: 12px;
   background-color: white;
@@ -58,9 +74,24 @@ b, p, dt {
   width: 250px;
   height: 30px;
 	margin: 5px;
+	transform: scale(1.1);
 }
 
 .main-button:hover {
+	transform: scale(1.2);
+}
+
+.grey-button {
+  border-radius: 12px;
+  background-color: #A6A6A6;
+  border: white;
+  width: 250px;
+  height: 30px;
+	margin: 5px;
+	transform: scale(1.1);
+}
+
+.grey-button:hover {
 	transform: scale(1.2);
 }
 
@@ -283,4 +314,50 @@ b, p, dt {
 	flex-wrap: wrap;
 	justify-content: center;
 	z-index: 4;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+	justify-content: center;
+	border-radius: 20px;
+  background-color: #fefefe;
+  margin: 0px;
+	// padding: 20px;
+  width: 500px;
+	height: 500px;
+	position: absolute;
+	// left: 33.33%;
+	top: 45%;
+	left: 50%;
+	/* bring your own prefixes */
+	transform: translate(-50%, -50%) scale(1.2);
+}
+
+.winning {
+	background-image: url('images/confetti.gif');
+	background-size: 600px 600px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.losing {
+	background-image: url('images/lose.gif');
+	background-size: 600px 600px;
+	background-repeat: no-repeat;
+	background-position: center;
 }

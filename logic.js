@@ -8,12 +8,21 @@ document.addEventListener('DOMContentLoaded', () => {
   const reposition = document.querySelector('#reposition')
   const rightCon = document.querySelector('.right-container')
   const centerCon = document.querySelector('.vertical-center')
-  const hide = document.querySelector('#hide')
+
+
+	const hide = document.querySelector('#hide')
   var turn
-  var instruction = document.querySelector('h3')
-  var userScore = 0
+	var instruction = document.querySelector('h3')
+
+	//var body = document.querySelector('.container')
+	var bot = document.querySelector('#bot')
+	var you = document.querySelector('#you')
+
+
+	var userScore = 0
   var botScore = 0
   var shotFired
+
 
   const foodArray = [
     {
@@ -194,10 +203,20 @@ document.addEventListener('DOMContentLoaded', () => {
     generateEnemy(foodArray[2])
     generateEnemy(foodArray[3])
     generateEnemy(foodArray[4])
-    hide.remove()
-    turn = document.createElement("b")
-    turn.innerText = "YOUR TURN"
-    instruction.append(turn)
+
+
+    hide.remove() // remove the "HIDE YOUR FOOD" text
+    //turn = document.createElement("b")
+    //turn.innerText = "YOUR TURN"
+    //instruction.append(turn)
+
+		// display images for turn status
+		bot.style.opacity = "1"
+		you.style.opacity = "1"
+
+
+
+
     gameLogic()
   })
 
@@ -261,6 +280,32 @@ document.addEventListener('DOMContentLoaded', () => {
             cell.classList.add('miss')
           }
       }))
+  }
+
+  // Get the modal
+  var modal = document.getElementById("myModal");
+
+  // Get the button that opens the modal
+  var winBtn = document.getElementById("winBtn");
+  var loseBtn = document.getElementById("loseBtn");
+
+  var message = document.getElementById("message");
+  var box = document.getElementById("modal-box");
+
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+
+  // When the user clicks the button, open the modal
+  winBtn.onclick = function() {
+    modal.style.display = "block";
+    message.innerText = "YOU WON";
+    box.classList.add('winning');
+  }
+
+  loseBtn.onclick = function() {
+    modal.style.display = "block";
+    message.innerText = "YOU LOST";
+    box.classList.add('losing');
   }
 
 })
