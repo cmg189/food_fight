@@ -61,6 +61,12 @@ b, p, dt {
 	width: auto;
 }
 
+/* turn status invisible until ready button is clicked*/
+.player-status{
+	opacity: 0;
+
+}
+
 .main-button {
   border-radius: 12px;
   background-color: white;
