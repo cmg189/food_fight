@@ -8,10 +8,18 @@ document.addEventListener('DOMContentLoaded', () => {
   const reposition = document.querySelector('#reposition')
   const rightCon = document.querySelector('.right-container')
   const centerCon = document.querySelector('.vertical-center')
-  const hide = document.querySelector('#hide')
+
+
+	const hide = document.querySelector('#hide')
   var turn
-  var instruction = document.querySelector('h3')
-  var userScore = 0
+	var instruction = document.querySelector('h3')
+
+	//var body = document.querySelector('.container')
+	var bot = document.querySelector('#bot')
+	var you = document.querySelector('#you')
+
+
+	var userScore = 0
   var botScore = 0
   var shotFired
 
@@ -195,10 +203,20 @@ document.addEventListener('DOMContentLoaded', () => {
     generateEnemy(foodArray[2])
     generateEnemy(foodArray[3])
     generateEnemy(foodArray[4])
-    hide.remove()
-    turn = document.createElement("b")
-    turn.innerText = "YOUR TURN"
-    instruction.append(turn)
+
+
+    hide.remove() // remove the "HIDE YOUR FOOD" text
+    //turn = document.createElement("b")
+    //turn.innerText = "YOUR TURN"
+    //instruction.append(turn)
+
+		// display images for turn status
+		bot.style.opacity = "1"
+		you.style.opacity = "1"
+
+
+
+
     gameLogic()
   })
 
