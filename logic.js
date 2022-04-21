@@ -214,6 +214,16 @@ document.addEventListener('DOMContentLoaded', () => {
 		bot.style.opacity = "1"
 		you.style.opacity = "1"
 
+		// Here are the methods to change the images according to whose turn it is
+		//
+		// place these lines when its your turn
+		//document.getElementById('bot_img').src="images/bot.png"
+		//document.getElementById('you_img').src="images/your_turn.png"
+		//
+		// place theses lines when its computers turn
+		//document.getElementById('bot_img').src="images/bot_turn.png"
+		//document.getElementById('you_img').src="images/you.png"
+
 
 
 
