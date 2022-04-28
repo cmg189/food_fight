@@ -307,6 +307,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     hide.remove() // remove the "HIDE YOUR FOOD" text
 
+
 		// display images for turn status
 		bot.style.opacity = "1"
 		you.style.opacity = "1"
