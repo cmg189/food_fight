@@ -3,7 +3,7 @@ body {
 	background-size: cover;
 }
 
-b, p, dt {
+b, p, dt, h2, h3 {
 	font-family: Verdana,sans-serif;
 	color: #69443C;
 }
@@ -21,6 +21,12 @@ b, p, dt {
 
 #message {
 		font-size: xx-large;
+}
+
+button {
+	font-family: Verdana,sans-serif;
+	color: #69443C;
+	font-weight: bold;
 }
 
 .container {
