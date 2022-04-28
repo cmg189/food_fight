@@ -283,6 +283,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function gameLogic()
   {
 	  //If it ends with a semicolon, I probably wrote it. -NoVA
+	  //A lot of comments are left over for possible bug testing, and to keep a physical track of what I have attempted. -NoVA
     // Loop for the game until someone score 25. It naturally loops so just if userScore < 25 && computerScore < 25.
 	//the turn change won't work without the recursive call.
 	if(userScore < 25 && botScore < 25){
@@ -294,19 +295,24 @@ document.addEventListener('DOMContentLoaded', () => {
 					{
 						cell.classList.add('hit')
 						userScore = userScore + 1;
+						turn = 'bot'; // Bot will no longer move after clicking a targeted space.
+						gameLogic(); //Recursive call to handle the fact that the bots turn is in this function rather than its own function.
 					}
 					else if (!cell.classList.contains('hit') && !cell.classList.contains('miss')) { //the not hit here is not redundant; the hit could be overwritten otherwise.
 						cell.classList.add('miss')
+						turn = 'bot'; //Bot will no longer move after clicking a previously targeted space.
+						gameLogic(); //recursive call to handle the fact that the bots turn is in this function, rather than being its own function that is called.
 					} //had to edit these so that the player doesn't double up. Need to figure out how to get it to not go to bot if you double up, though. may a while.-NoVA
 				//}while(cell.classList.contains('hit') || cell.classList.contains('miss')); //do while to make sure that player hitting an already hit one does not double up.
-				turn = 'bot';
+				//turn = 'bot'; //original position of this- This is left for bugtesting.
 				//console.log(userScore);
 				//console.log(turn);
 				//This recursive call is REQUIRED* to get to the bot turn. I don't know why, but without this it just didn't work that I could find. -NoVA
-				gameLogic(); //probably why player gets an extra turn. though, that implies that it is going past this without it.
+				//gameLogic(); //probably why player gets an extra turn. though, that implies that it is going past this without it.
 			}))
 			//console.log(userScore);
 		}
+		//Should probably make this its own function, and have the above call this.
 		if(turn === 'bot') //maybe should be an else if? I don't think so, though.
 		{
 			//bot chooses a target at random that is on the board.
@@ -316,7 +322,7 @@ document.addEventListener('DOMContentLoaded', () => {
 				zone = Math.floor( Math.random() * userSquares.length); //zone is the cpu's target.
 			}
 			while(userSquares[zone].classList.contains('hit') || userSquares[zone].classList.contains('miss'));
-			console.log(zone);
+			//console.log(zone);
 			//zone = 20; //for the sake of testing.
 			if(userSquares[zone].classList.contains('taken')) //if the cell/zone/spot is taken, make it hit.
 			{
@@ -331,9 +337,9 @@ document.addEventListener('DOMContentLoaded', () => {
 			turn = 'user';
 		}
 	} //if game is on (both scores < 25)
-	//userScore > botScore because in my testing, the user got one more move before this was checked. Need to figure out why. -NoVA
+	//userScore > botScore because in my testing, the user got one more move before this was checked. Likely due to the recursion. -NoVA
 	else if (userScore >= 25 && userScore > botScore) { //user wins
-		winMsg(); //Need to find an alternate way.
+		winMsg();
 	}
 	else if (botScore >= 25) { //computer wins
 		loseMsg();
@@ -341,8 +347,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	else {
 		//Error.
 	}
-	//need to add the logic for the computer attacking player. Above is user attacking computer. -NoVA, reminder to self
-	//Also need to add points, and turn changing. Or at least the images changing, idk. -NoVA, reminder to self.
   }
   
   // Get the modal
