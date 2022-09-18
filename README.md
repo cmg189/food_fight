@@ -53,12 +53,12 @@ In Food Fight, the objective is to eat your opponent’s food before they eat yo
 
 Positioning your food items
 
-![positioning](images/screenshot01.png)<br>
+![positioning](images/screenshot01.PNG)<br>
 
 
 Gameplay
 
-![gameplay](images/screenshot02.png)<br>
+![gameplay](images/screenshot02.PNG)<br>
 
 ### Additional Development
 
