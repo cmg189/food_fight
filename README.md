@@ -7,6 +7,8 @@ Food Fight is a single-player game that is based on the popular Battleship board
 
 To play Food Fight visit our [website](https://cmg189.github.io/food_fight/)!
 
+Note: For a better experience please play Food Fight in a fullscreen browser window
+
 ### Objective
 
 In Food Fight, the objective is to eat your opponent’s food before they eat yours!
