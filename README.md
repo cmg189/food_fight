@@ -78,6 +78,6 @@ Features to be considered to further development are:
 
 This project was made in close collaboration with Audrey!
 
-She is a talented full-stack developer with a great eye UI/UX design.
+She is a talented full-stack developer with a great eye for UI/UX design.
 
 Visit her github page [here](https://github.com/Chalieta)!
